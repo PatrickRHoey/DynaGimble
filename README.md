@@ -6,10 +6,10 @@ RX-24F Servo, but can be easily altered to fit any system of dynamixels. Designe
 If you intend to add additional servos to create an arm/etc you need to edit the yaml and the launch files
 include in order to serve your project
 <h2>Launch Instructions</h2>
-1. roslaunch my_dynamixel_tutorial controller_manager.launch
-2. roslaunch my_dynamixel_tutorial start_meta_controller.launch
+1. roslaunch DynaGimble controller_manager.launch
+2. roslaunch DynaGimble start_meta_controller.launch
 3. rosrun joy joy_node
-4. rosrun my_dynamixel_tutorial joy_testing
+4. rosrun DynaGimble joy_testing.py
 
 ***
 * Ensure that the power supply is properly powering your servos, and that both the servos and the joystick are properly connected when running the system
