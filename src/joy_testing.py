@@ -29,12 +29,6 @@ def callback(data):
     print("X axis:" + str(x_axis))
     print("Y axis:" + str(y_axis))
 
-
-    coolXValue = x_axis / 0.2 - .47368
-    coolYValue = y_axis / 0.2 - .47368
-    print("COOL:" + str(coolXValue))
-    print("COOL:" + str(coolYValue))
-
     pub_x_axis.publish(x_axis)
     pub_y_axis.publish(y_axis)
 
