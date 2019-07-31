@@ -11,9 +11,10 @@ def callback(data):
     global x_axis
     global y_axis
 
-    x_axis += ((data.axes[1]) * 0.2)
-    y_axis += ((data.axes[2]) * 0.2)
+    x_axis += ((data.axes[1]) * 0.05)
+    y_axis += ((data.axes[2]) * 0.05)
 
+    #Turn Limit Conditions
     if (x_axis > 1.6):
         x_axis = 1.6
     elif(x_axis < -2.2):

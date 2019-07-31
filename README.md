@@ -10,9 +10,11 @@ include in order to serve your project
 
 1. roslaunch DynaGimble controller_manager.launch
 2. roslaunch DynaGimble start_meta_controller.launch
-3. rosrun joy joy_node -~autorepeat_rate=10
+3. rosrun joy joy_node -~autorepeat_rate=50
 4. rosrun DynaGimble joy_testing.py
 
+
+One time use: rosparam set /joy_node/autorepeat_rate 50
 ***
 * Ensure that the power supply is properly powering your servos and that both the servos and the joystick are properly connected when running the system
 
