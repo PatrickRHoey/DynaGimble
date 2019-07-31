@@ -6,6 +6,7 @@ RX-24F Servo, but can be easily altered to fit any system of dynamixels. Designe
 If you intend to add additional servos to create an arm/etc you need to edit the yaml and the launch files
 include in order to serve your project
 <h2>Launch Instructions</h2>
+
 1. roslaunch DynaGimble controller_manager.launch
 2. roslaunch DynaGimble start_meta_controller.launch
 3. rosrun joy joy_node
