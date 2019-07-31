@@ -3,21 +3,16 @@ import rospy
 from sensor_msgs.msg import Joy
 from std_msgs.msg import Float64
 
-x_axis = -0.3
-y_axis = -0.3
-debug = []
+x_axis = -0.0
+y_axis = -0.0
 
 def callback(data):
     #These values are based of off servo turn radius and the total arc you want them to be able to rotate about
     global x_axis
     global y_axis
-    global debug
 
-    debug.append(data.axes[2])
-
-    #Weird float being added is due to trigger center postion being off on controller
-    x_axis += ((data.axes[1] + 0.47368414) * 0.2)
-    y_axis += ((data.axes[2] + 0.473684206605) * 0.2)
+    x_axis += ((data.axes[1]) * 0.2)
+    y_axis += ((data.axes[2]) * 0.2)
 
     if (x_axis > 1.6):
         x_axis = 1.6
@@ -57,10 +52,3 @@ def start():
 
 if __name__ == '__main__':
     start()
-    sum = 0
-    for i in range(len(debug)):
-        print("Current Value:" + str(debug[i]))
-        sum += debug[i]
-
-    finalValue = sum / len(debug)
-    print("Final Use Value Is: " + str(finalValue))

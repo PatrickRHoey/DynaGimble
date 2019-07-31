@@ -10,7 +10,7 @@ include in order to serve your project
 
 1. roslaunch DynaGimble controller_manager.launch
 2. roslaunch DynaGimble start_meta_controller.launch
-3. rosrun joy joy_node
+3. rosrun joy joy_node -~autorepeat_rate=10
 4. rosrun DynaGimble joy_testing.py
 
 ***
