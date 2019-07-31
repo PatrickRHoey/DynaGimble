@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>my_dynamixel_tutorial</name>
+  <name>DynaGimble</name>
   <version>0.0.0</version>
-  <description>The my_dynamixel_tutorial package</description>
+  <description>Dynamixel Gimble Control, used for a pan tilt joint</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
