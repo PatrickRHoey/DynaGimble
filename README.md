@@ -12,7 +12,7 @@ include in order to serve your project
 4. rosrun DynaGimble joy_testing.py
 
 ***
-* Ensure that the power supply is properly powering your servos, and that both the servos and the joystick are properly connected when running the system
+* Ensure that the power supply is properly powering your servos and that both the servos and the joystick are properly connected when running the system
 
 <h2>Requirements</h2>
 * ros-kinetic
