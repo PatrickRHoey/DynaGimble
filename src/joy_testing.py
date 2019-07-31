@@ -3,8 +3,8 @@ import rospy
 from sensor_msgs.msg import Joy
 from std_msgs.msg import Float64
 
-x_axis = 4.7909
-y_axis = 4.8627
+x_axis = -0.3
+y_axis = -0.3
 
 def callback(data):
     #These values are based of off servo turn radius and the total arc you want them to be able to rotate about
@@ -29,11 +29,21 @@ def callback(data):
     print("X axis:" + str(x_axis))
     print("Y axis:" + str(y_axis))
 
+
+    coolXValue = x_axis / 0.2 - .47368
+    coolYValue = y_axis / 0.2 - .47368
+    print("COOL:" + str(coolXValue))
+    print("COOL:" + str(coolYValue))
+
     pub_x_axis.publish(x_axis)
     pub_y_axis.publish(y_axis)
 
+
 # Intializes everything
 def start():
+    # starts the node
+    rospy.init_node('Joystick_testing')
+
     #Pan Joint Positioning
     global pub_x_axis
     pub_x_axis = rospy.Publisher('joint1_controller/command', Float64, queue_size=10)
@@ -45,8 +55,6 @@ def start():
     # subscribed to joystick inputs on topic "joy"
     rospy.Subscriber("joy", Joy, callback)
 
-    # starts the node
-    rospy.init_node('Joystick_testing')
     rospy.spin()
 
 if __name__ == '__main__':
